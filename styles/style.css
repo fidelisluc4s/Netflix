@@ -78,6 +78,8 @@ header{
     ),
     url(/assets/Imagens/banner1.png);
     background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     padding: 0.26rem 0.75rem 0 0.75rem;
 }
 
@@ -145,4 +147,48 @@ header{
 
 .banner__btn i {
     margin-right: 0.5rem;
+}
+
+
+/* Lista favorita */
+
+.lista__favorita{
+    height: 200px;
+}
+
+.lista__favorito__subtitulo{
+    color: white;
+    font-size: 18px;
+    line-height: 17px;
+    font-weight: 600;
+}
+
+section{
+    width: 100%;
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(5, auto);
+    margin: 20px 0;
+}
+
+.item {
+    padding: 0 2px;
+    transition: 250ms all;
+}
+
+.item img{
+    max-width: 100%;
+    padding-right: 5px;
+}
+.lista__favorita__grid{
+    display: grid;
+    grid-gap: 0.5rem;
+    grid-template-columns:  40% 40% 40% 40% 40% 40% 40% 40% 40% 40%;
+    grid-template-rows: 100%;
+}
+
+.lista__favorita__grid img{
+    display: grid;
+    width: 100%;
+    height: 100%;
 }
