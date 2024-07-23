@@ -148,15 +148,17 @@ header{
 .banner__btn i {
     margin-right: 0.5rem;
 }
-
+/* Fim Banner */
 
 /* Lista favorita */
 
-.lista__favorita{
+.categoria{
     height: 200px;
 }
 
-.lista__favorito__subtitulo{
+.categoria__titulo{
+    padding: 0.6rem 0.5rem;
+    margin: auto;
     color: white;
     font-size: 18px;
     line-height: 17px;
@@ -165,7 +167,7 @@ header{
 
 section{
     width: 100%;
-    position: relative;
+    position:fixed;
     display: grid;
     grid-template-columns: repeat(5, auto);
     margin: 20px 0;
@@ -175,7 +177,12 @@ section{
     padding: 0 2px;
     transition: 250ms all;
 }
-
+/* Lista favorito animação*/
+.-animacao:hover{
+    margin: 0 40px;
+    transform: scale(1.2);
+}
+/* Fim Lista favorito animação*/
 .item img{
     max-width: 100%;
     padding-right: 5px;
@@ -183,7 +190,7 @@ section{
 .lista__favorita__grid{
     display: grid;
     grid-gap: 0.5rem;
-    grid-template-columns:  40% 40% 40% 40% 40% 40% 40% 40% 40% 40%;
+    grid-template-columns:  repeat(5, auto);
     grid-template-rows: 100%;
 }
 
@@ -192,3 +199,5 @@ section{
     width: 100%;
     height: 100%;
 }
+/* Fim Lista favorito*/
+
