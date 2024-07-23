@@ -68,7 +68,7 @@ header{
 /* Banner */
 .app__background{
     
-    height: 100vh;
+    height: 80vh;
     background-image: linear-gradient(
       to bottom,
       rgba(0, 0, 0, 0.9) 5%,
@@ -153,12 +153,10 @@ header{
 /* Lista favorita */
 
 .categoria{
-    height: 200px;
+    height: 250px;
 }
 
-.categoria__titulo{
-    padding: 0.6rem 0.5rem;
-    margin: auto;
+.categoria__titulo{    
     color: white;
     font-size: 18px;
     line-height: 17px;
@@ -167,13 +165,14 @@ header{
 
 section{
     width: 100%;
-    position:fixed;
+    position: absolute;
     display: grid;
     grid-template-columns: repeat(5, auto);
     margin: 20px 0;
 }
 
 .item {
+    
     padding: 0 2px;
     transition: 250ms all;
 }
@@ -186,18 +185,6 @@ section{
 .item img{
     max-width: 100%;
     padding-right: 5px;
-}
-.lista__favorita__grid{
-    display: grid;
-    grid-gap: 0.5rem;
-    grid-template-columns:  repeat(5, auto);
-    grid-template-rows: 100%;
-}
-
-.lista__favorita__grid img{
-    display: grid;
-    width: 100%;
-    height: 100%;
 }
 /* Fim Lista favorito*/
 
