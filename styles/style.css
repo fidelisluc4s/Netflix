@@ -9,6 +9,27 @@ body {
     background-color: black;
 }
 
+.app__background{    
+    height: 100vh;
+    background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.9) 5%,
+      rgba(0, 0, 0, 0.2) 20%,
+      rgba(0, 0, 0, 0.2) 80%,
+      rgba(0, 0, 0, 0.8) 100%
+    ),
+    url(/assets/Imagens/banner1.png);
+    background-size: cover;
+    padding: 0.26rem 0.75rem 0 0.75rem;
+}
+
+.app__hero {
+    width: 100%;
+    margin: 0 auto;
+    height: 100%;
+    padding: 0 3rem;
+}
+
 /* Navegação */
 header{
     display: flex;
@@ -59,36 +80,19 @@ header{
     align-items: center;
 }
 
-.header__menu--right img {
+.header__user img {
     width: 2rem;
     margin-right: 0.5rem;
     border-radius: 3px;
 }
 
-/* Banner */
-.app__background{
-    
-    height: 80vh;
-    background-image: linear-gradient(
-      to bottom,
-      rgba(0, 0, 0, 0.9) 5%,
-      rgba(0, 0, 0, 0.2) 20%,
-      rgba(0, 0, 0, 0.2) 80%,
-      rgba(0, 0, 0, 0.8) 100%
-    ),
-    url(/assets/Imagens/banner1.png);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    padding: 0.26rem 0.75rem 0 0.75rem;
+/* Main */
+
+main {
+    display: inline;
 }
 
-.app__hero {
-    width: 100%;
-    margin: 0 auto;
-    height: 100%;
-    padding: 0 3rem;
-}
+/* Banner */
 
 .banner{
     height: 80%;
@@ -99,7 +103,7 @@ header{
 }
 
 .banner__poster{
-    width: 80%;
+    width: 450px;
 }
 
 .banner__subtitle{
@@ -116,7 +120,7 @@ header{
 }
 
 .banner__btn--play{
-    padding: 0,6rem 2rem;
+    padding: 0.6rem 2rem;
     margin-right: 0.75rem;
     font-weight: 600;
     border-radius: 0.125rem;
@@ -153,7 +157,7 @@ header{
 /* Lista favorita */
 
 .categoria{
-    height: 250px;
+    height: 200px;
 }
 
 .categoria__titulo{    
@@ -163,28 +167,150 @@ header{
     font-weight: 600;
 }
 
+/* Lista de Humor*/
+
+.embrulho{
+    display: grid;
+    grid-template-columns: repeat(3,100%);
+    overflow: hidden;
+    scroll-behavior: smooth;
+}
+
 section{
     width: 100%;
-    position: absolute;
+    position: relative;
     display: grid;
     grid-template-columns: repeat(5, auto);
     margin: 20px 0;
 }
 
 .item {
-    
     padding: 0 2px;
     transition: 250ms all;
 }
-/* Lista favorito animação*/
-.-animacao:hover{
+
+.-animation:hover{
     margin: 0 40px;
     transform: scale(1.2);
 }
-/* Fim Lista favorito animação*/
+
 .item img{
     max-width: 100%;
     padding-right: 5px;
 }
-/* Fim Lista favorito*/
 
+.arrow__btn{
+    position: absolute;
+    color: white;
+    text-decoration: none;
+    font-size: 6em;
+    background: rgb(0, 0, 0);
+    width: 80px;
+    padding: 20px;
+    text-align: center;
+    z-index: 1;
+}
+
+.arrow__btn i{
+    font-size: 2rem;
+    color: rgba(255, 255, 255, 0.637);
+}
+
+.arrow__btn i:hover{
+    color: white;
+    transform: scale(1.15);
+}
+
+.arrow__btn:nth-of-type(1){
+    top: -16px;
+    bottom: -10px;
+    left: 0;
+    background: linear-gradient(
+        -90deg,
+        rgba(0,0,0,0) 0%,
+        rgba(0,0,0,1)100%
+    );    
+}
+
+.arrow__btn:nth-of-type(2){
+    top: -16px;
+    bottom: -10px;
+    right: 0;
+    background: linear-gradient(
+        90deg,
+        rgba(0,0,0,0) 0%,
+        rgba(0,0,0,1)100%
+    );
+}
+
+
+
+/* Roda pé */
+
+footer{
+    margin-top: 2rem;
+}
+
+.social-links {
+    height: 25px;
+    width: 50%;
+    padding-top: 1.5rem;
+}
+
+.social-links i {
+    font-size: 22px;
+    margin-right: 1.5rem;
+    cursor: pointer;
+    color: white;
+}
+.link-content {
+    margin: 20px auto;
+    color: grey;
+}
+
+.link-content__info {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 0.5em;
+}
+
+.link-content__info ul {
+    font-size: 13px;
+    display: flex;
+    flex-direction: column;
+    padding: initial;
+}
+
+.link-content__info ul li {
+    list-style: none;
+    margin-bottom: 16px;
+    cursor: pointer;
+    padding-top: 0.1rem;
+}
+
+.link-content__info ul li:hover{
+    text-decoration: underline;
+}
+
+.link-content__service {
+    margin-bottom: 20px;
+    font-size: 13px;
+}
+
+.link-content__service-code {
+    background: 0 0;
+    color: grey;
+    border: solid 1px grey;
+    padding: 0.5rem;
+}
+
+.link-content__service-code:hover{
+    color: white;
+    border: solid 1px white;
+}
+
+.link-content__copyright {
+    font-size: 11px;
+    margin-bottom: 15px;
+    padding: 1rem 4px;
+}
